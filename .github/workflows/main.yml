@@ -58,8 +58,8 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          platforms: linux/amd64
+          platforms: linux/arm64
           push: ${{ github.event_name != 'pull_request' }}
           tags: |
-            tangcuyu/bolo-solo:latest
-            tangcuyu/bolo-solo:${{ steps.date.outputs.today }}
+            tangcuyu/bolo-solo:arm64-latest
+            tangcuyu/bolo-solo:arm64-${{ steps.date.outputs.today }}
